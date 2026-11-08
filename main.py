@@ -4,19 +4,12 @@ import openai
 
 from i18n import TRANSLATIONS
 
-MODEL_NAME = os.getenv("MODEL_NAME")
-MODEL_TEMPERATURE = os.getenv("MODEL_TEMPERATURE")
-MODEL_FREQUENCY_PENALTY = os.getenv("MODEL_FREQUENCY_PENALTY")
-MODEL_URL = os.getenv("MODEL_URL")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-MODEL_TIMEOUT = os.getenv("MODEL_TIMEOUT")
-
-GROQ_API_KEY="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"
-MODEL_URL = "https://api.groq.com/openai/v1"
-MODEL_NAME = "openai/gpt-oss-20b"
-MODEL_TIMEOUT = 320
-MODEL_TEMPERATURE = 0.3
-MODEL_FREQUENCY_PENALTY = 0.5
+MODEL_NAME = st.secrets.get("MODEL_NAME") or os.getenv("MODEL_NAME")
+MODEL_TEMPERATURE = st.secrets.get("MODEL_TEMPERATURE") or os.getenv("MODEL_TEMPERATURE")
+MODEL_FREQUENCY_PENALTY = st.secrets.get("MODEL_FREQUENCY_PENALTY") or os.getenv("MODEL_FREQUENCY_PENALTY")
+MODEL_URL = st.secrets.get("MODEL_URL") or os.getenv("MODEL_URL")
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
+MODEL_TIMEOUT = st.secrets.get("MODEL_TIMEOUT") or os.getenv("MODEL_TIMEOUT")
 
 
 def get_model_response(user_notes):

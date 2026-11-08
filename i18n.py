@@ -1,7 +1,7 @@
 TRANSLATIONS = {
     "en": {
         "title": "Create flashcards from your lecture notes in one click!",
-        "description": "Transform your raw lecture notes, articles, or keyword lists into study-ready flashcards instantly. This tool saves you hours of manual work by generating tab-separated files ready for Anki or Quizlet.",
+        "description": "git status. This tool saves you hours of manual work by generating tab-separated files ready for Anki or Quizlet.",
         "input_label": "Paste your study materials here",
         "placeholder": "Paste your lecture notes, article, or a list of terms here...",
         "button": "Get Flashcards",
