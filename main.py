@@ -4,12 +4,12 @@ import openai
 
 from i18n import TRANSLATIONS
 
-MODEL_NAME = st.secrets.get("MODEL_NAME") or os.getenv("MODEL_NAME")
-MODEL_TEMPERATURE = st.secrets.get("MODEL_TEMPERATURE") or os.getenv("MODEL_TEMPERATURE")
-MODEL_FREQUENCY_PENALTY = st.secrets.get("MODEL_FREQUENCY_PENALTY") or os.getenv("MODEL_FREQUENCY_PENALTY")
-MODEL_URL = st.secrets.get("MODEL_URL") or os.getenv("MODEL_URL")
-GROQ_API_KEY = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
-MODEL_TIMEOUT = st.secrets.get("MODEL_TIMEOUT") or os.getenv("MODEL_TIMEOUT")
+MODEL_NAME = os.getenv("MODEL_NAME")
+MODEL_TEMPERATURE = os.getenv("MODEL_TEMPERATURE")
+MODEL_FREQUENCY_PENALTY = os.getenv("MODEL_FREQUENCY_PENALTY")
+MODEL_URL = os.getenv("MODEL_URL")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+MODEL_TIMEOUT = os.getenv("MODEL_TIMEOUT")
 
 
 def get_model_response(user_notes):
