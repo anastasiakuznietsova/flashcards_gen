@@ -5,11 +5,11 @@ import openai
 from i18n import TRANSLATIONS
 
 MODEL_NAME = os.getenv("MODEL_NAME")
-MODEL_TEMPERATURE = os.getenv("MODEL_TEMPERATURE")
-MODEL_FREQUENCY_PENALTY = os.getenv("MODEL_FREQUENCY_PENALTY")
+MODEL_TEMPERATURE = float(os.getenv("MODEL_TEMPERATURE"))
+MODEL_FREQUENCY_PENALTY = float(os.getenv("MODEL_FREQUENCY_PENALTY"))
 MODEL_URL = os.getenv("MODEL_URL")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-MODEL_TIMEOUT = os.getenv("MODEL_TIMEOUT")
+MODEL_TIMEOUT = float(os.getenv("MODEL_TIMEOUT"))
 
 
 def get_model_response(user_notes):
